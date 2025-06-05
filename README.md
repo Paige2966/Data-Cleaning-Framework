@@ -123,6 +123,35 @@ Few, if any, datasets are perfect. The goal is to clean data so that it’s suff
 > If the issue magnitude is **< 20%**, document it.  
 > If it's **> 20%**, resolve or escalate.
 
-**Validation Rule Example:**  
-```excel
-=E2 >= F2
+---
+
+## **Validation Rule Example:**  
+=E2 > F2   // Marks TRUE where ship date is before purchase date.
+
+
+---
+
+##  Issue Magnitude Calculation:
+=D2/21865   // Then format as a percentage.
+
+---
+
+## ➕ Augment the Data
+- Slice data (e.g., by week/month/year)
+- Add year/month columns from `Purchase_TS`
+- Calculate “Time to Ship” as the difference between `Ship_TS` and `Purchase_TS`
+- Use `VLOOKUP` to add the region from the Region tab
+
+## 📝 Notate and Document
+- Complete each item in the **Issues Log**
+- Track issue resolution and assumptions
+- Include a magnitude column for each issue
+
+## 📌 Notes
+- Negative “Time to Ship” values indicate data issues (e.g., shipping before purchase).
+- Manual region assignment was done for a few unmatched rows (e.g., EU → EMEA, AP → APAC).
+
+
+
+
+
