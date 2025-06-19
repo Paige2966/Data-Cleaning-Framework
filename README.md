@@ -1,7 +1,8 @@
 # Data Cleaning Framework README
 
 **GameZone Dataset**  
-**Owner:** Christine Jiang  
+**Report Owner:** Rachel Paige (built README.md and the report)
+**Data Owner** Christine Jiang  (provided the data used for this report only)
 **Data Type:** Excel File  
 
 ---
